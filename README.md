@@ -1,5 +1,4 @@
 ## Creating an nToklo account & application from an eCommerce platform extension
-How to create an nToklo account and application from within your platform admin panel
 -------------------------------------------------------------------------------------------------
 
 ## Introduction
