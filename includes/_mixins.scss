@@ -1,0 +1,34 @@
+/* _mixins.scss */
+
+@mixin gradient ($colorStop1, $colorStop2, $startPoint, $endPoint) {
+	background-color: $colorStop2;
+	background-image: 		 -webkit-gradient(linear, left $startPoint, left $endPoint, $colorStop1, $colorStop2);	/* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient($startPoint, $colorStop1, $colorStop2);						/* Chrome10+,Safari5.1+ */
+	background-image:	 -moz-linear-gradient($startPoint, $colorStop1, $colorStop2);				/* FF3.6+ */
+	background-image: 	  -ms-linear-gradient($startPoint, $colorStop1, $colorStop2);				/* IE10+ */
+	background-image: 	   -o-linear-gradient($startPoint, $colorStop1, $colorStop2);						/* Opera 11.10+ */
+	background-image: 		  linear-gradient(to $endPoint, $colorStop1, $colorStop2);				/* W3C */
+}
+
+@mixin borderRadius ($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		 -o-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@mixin oneRoundCorner ($radius, $positionVertical, $positionHoriztonal) {
+	-webkit-border-#{$positionVertical}-#{$positionHoriztonal}-radius: $radius;
+	   -moz-border-#{$positionVertical}-#{$positionHoriztonal}-radius: $radius;
+		-ms-border-#{$positionVertical}-#{$positionHoriztonal}-radius: $radius;
+		 -o-border-#{$positionVertical}-#{$positionHoriztonal}-radius: $radius;
+			border-#{$positionVertical}-#{$positionHoriztonal}-radius: $radius;
+}
+
+@mixin shadow ($x, $y, $size, $spread, $color) {
+	-webkit-box-shadow: $x $y $size $spread $color;
+	   -moz-box-shadow: $x $y $size $spread $color;
+			box-shadow: $x $y $size $spread $color;
+}
+

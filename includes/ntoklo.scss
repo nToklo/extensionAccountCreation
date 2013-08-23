@@ -1,0 +1,48 @@
+@import "_mixins";
+
+#ntIFrameWrapper {
+	width: 480px;
+
+	&.login {
+		#ntIFrameEl {
+			height: 670px;
+		}
+	}
+	&.register {
+		#ntIFrameEl {
+			height: 888px;
+		}
+	}
+}
+#ntIFrameEl {
+	border: 1px solid #ddd;
+	width: 480px;
+}
+.btn {
+	border: 1px solid #cccccc;
+	border-bottom: 1px solid #a5a097;
+	color: #444444;
+	display: inline-block;
+	font-size: .9em;
+	padding: .3em .6em;
+	text-align: center;
+	text-decoration: none;
+	width: 125px;
+
+	@include shadow (0, 1px, 1px, 0, rgba(177, 177, 177, 0.4));
+	@include gradient (#ffffff, #dddddd, top, bottom);
+	@include borderRadius(.3em);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include gradient (#fafafa, #d9d9d9, top, bottom);
+	}
+
+	&.amber {
+		@include gradient (#ffea4d, #ebae2d, top, bottom);
+	}
+}
+.no_account {
+	margin-right: 10px;
+}

@@ -1,0 +1,74 @@
+/* _mixins.scss */
+#ntIFrameWrapper {
+  width: 480px; }
+  #ntIFrameWrapper.login #ntIFrameEl {
+    height: 670px; }
+  #ntIFrameWrapper.register #ntIFrameEl {
+    height: 888px; }
+
+#ntIFrameEl {
+  border: 1px solid #ddd;
+  width: 480px; }
+
+.btn {
+  border: 1px solid #cccccc;
+  border-bottom: 1px solid #a5a097;
+  color: #444444;
+  display: inline-block;
+  font-size: .9em;
+  padding: .3em .6em;
+  text-align: center;
+  text-decoration: none;
+  width: 125px;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(177, 177, 177, 0.4);
+  -moz-box-shadow: 0 1px 1px 0 rgba(177, 177, 177, 0.4);
+  box-shadow: 0 1px 1px 0 rgba(177, 177, 177, 0.4);
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, white, #dddddd);
+  /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, white, #dddddd);
+  /* Chrome10+,Safari5.1+ */
+  background-image: -moz-linear-gradient(top, white, #dddddd);
+  /* FF3.6+ */
+  background-image: -ms-linear-gradient(top, white, #dddddd);
+  /* IE10+ */
+  background-image: -o-linear-gradient(top, white, #dddddd);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, white, #dddddd);
+  /* W3C */
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em; }
+  .btn:hover, .btn:focus, .btn:active {
+    background-color: #d9d9d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, #fafafa, #d9d9d9);
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #fafafa, #d9d9d9);
+    /* Chrome10+,Safari5.1+ */
+    background-image: -moz-linear-gradient(top, #fafafa, #d9d9d9);
+    /* FF3.6+ */
+    background-image: -ms-linear-gradient(top, #fafafa, #d9d9d9);
+    /* IE10+ */
+    background-image: -o-linear-gradient(top, #fafafa, #d9d9d9);
+    /* Opera 11.10+ */
+    background-image: linear-gradient(to bottom, #fafafa, #d9d9d9);
+    /* W3C */ }
+  .btn.amber {
+    background-color: #ebae2d;
+    background-image: -webkit-gradient(linear, left top, left bottom, #ffea4d, #ebae2d);
+    /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #ffea4d, #ebae2d);
+    /* Chrome10+,Safari5.1+ */
+    background-image: -moz-linear-gradient(top, #ffea4d, #ebae2d);
+    /* FF3.6+ */
+    background-image: -ms-linear-gradient(top, #ffea4d, #ebae2d);
+    /* IE10+ */
+    background-image: -o-linear-gradient(top, #ffea4d, #ebae2d);
+    /* Opera 11.10+ */
+    background-image: linear-gradient(to bottom, #ffea4d, #ebae2d);
+    /* W3C */ }
+
+.no_account {
+  margin-right: 10px; }
