@@ -12,7 +12,7 @@ var
 			myFrame = document.createElement("iframe");
 
 			myFrame.id 	= "ntIFrameEl";
-			myFrame.src = "http://127.0.0.1:8080/register" +
+			myFrame.src = "https://console.ntoklo.com/register" +
 						  "?p=" + window.ntParams.p + 
 						  "&f=" + window.ntParams.f +
 						  "&l=" + window.ntParams.l +
