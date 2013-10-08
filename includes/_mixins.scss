@@ -32,3 +32,25 @@
 			box-shadow: $x $y $size $spread $color;
 }
 
+@mixin insetShadow ($x, $y, $size, $spread, $color) {
+	-webkit-box-shadow: inset $x $y $size $spread $color;
+	   -moz-box-shadow: inset $x $y $size $spread $color;
+			box-shadow: inset $x $y $size $spread $color;
+}
+
+@mixin rotate ($degree) {
+	-webkit-transform: rotate($degree);
+	   -moz-transform: rotate($degree);
+		-ms-transform: rotate($degree);
+		 -o-transform: rotate($degree);
+			transform: rotate($degree);
+}
+
+@mixin transition ($property, $speed, $easing, $delay) {
+	-webkit-transition: $property $speed $easing $delay;
+	   -moz-transition: $property $speed $easing $delay;
+		-ms-transition: $property $speed $easing $delay;
+		 -o-transition: $property $speed $easing $delay;
+			transition: $property $speed $easing $delay;
+}
+

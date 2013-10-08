@@ -1,5 +1,12 @@
 @import "_mixins";
 
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+}
+
 #ntIFrameWrapper {
 	width: 480px;
 
@@ -18,16 +25,15 @@
 	border: 1px solid #ddd;
 	width: 480px;
 }
-.btn {
+.nt_btn {
 	border: 1px solid #cccccc;
 	border-bottom: 1px solid #a5a097;
 	color: #444444;
 	display: inline-block;
-	font-size: .9em;
-	padding: .3em .6em;
+	font-size: 1em;
+	padding: .4em .6em;
 	text-align: center;
 	text-decoration: none;
-	width: 125px;
 
 	@include shadow (0, 1px, 1px, 0, rgba(177, 177, 177, 0.4));
 	@include gradient (#ffffff, #dddddd, top, bottom);
@@ -43,6 +49,255 @@
 		@include gradient (#ffea4d, #ebae2d, top, bottom);
 	}
 }
-.no_account {
+
+.nt_account,
+.nt_no_account {
+	width: 120px;
+}
+
+.nt_no_account {
 	margin-right: 10px;
+}
+
+.nt_explanation,
+.nt_settings_panel_wrapper {
+	float: left;
+	width: 300px;
+}
+.nt_settings_panel_wrapper {
+	position: relative;
+	width: 100%;
+}
+.nt_explanation {
+	margin: 0 20px 3em 0;
+}
+#nt_key_and_secret {
+	height: 80px;
+	margin: 1em 0;
+	width: 100%;
+}
+#ntIFrameWrapper {
+	left: 350px;
+	position: absolute;
+	top: 40px;
+	z-index: 1000;
+}
+#ntIFrameWrapper.login #ntIFrameEl, 
+#ntIFrameWrapper.register #ntIFrameEl {
+	height: 550px;
+}
+
+#nt_confirmation_code_wrapper {
+	p {
+		display: none;
+		margin: 0;
+	}
+	&.nt_active {
+		background: #FFFEAD;
+		padding: 1em 1em 0 1em;
+
+		#nt_confirmation_assist_text_1 {
+			display: block;
+		}
+	}
+}
+
+.nt_divider {
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+.nt_explanation .row {
+	margin: .5em 0;
+}
+.nt_explanation .radio_btn {
+	float: left;
+}
+.nt_explanation label {
+	display: block;
+	padding-left: 25px;
+}
+
+.nt_settings_wrapper {
+	clear: both;
+	float: left;
+	padding-top: 20px;
+	position: relative;
+	width: 100%;
+
+}
+.nt_settings_panel {
+	float: left;
+	margin-right: 455px;
+
+	h2 {
+		margin-top: 0;
+		padding: 0;
+	}
+	h3 {
+		font-size: 1.4em;
+		margin-top: 0;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	.nt_code {
+		background: #ddd;
+		display: inline-block;
+		font-family: "Courier New", Courier, monospace;
+		-ms-word-break: break-all;
+		word-wrap: break-all;
+		word-break: break-all; /* webkit */
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+	}
+	ul.nt_features {
+		list-style: disc;
+		padding: 0 2em 1em 2em;
+	}
+	.nt_console_img {
+		float: right;
+		margin: 1em 0 2em 2em;
+	}
+	.nt_btn.nt_i_understand {
+		padding: .7em 1.3em;
+	}
+	.nt_btn.nt_console_link {
+		display: block;
+		float: left;
+		font-size: 1.1em;
+		height: 17px;
+		margin-bottom: 20px;
+		padding: .7em;
+		width: 140px;
+
+		.nt_svg_label {
+			margin-right: 10px;
+		}
+		.nt_svg_wrap {
+			float: right;
+			margin-right: 5px;
+		}
+	}
+}
+.nt_chart_wrapper {
+	background: #fff;
+	border-left: 1px solid #ddd;
+	padding: 0 0 100px 25px;
+	position: absolute;
+	right: 0;
+	top: 25px;
+	width: 410px;
+	z-index: 10000;
+
+	h2 {
+		margin: 0 0 15px 0;
+		padding-top: 0;
+	}
+
+	.nt_wrapper {
+		margin-bottom: 20px;
+	}
+}
+.nt_settings_section {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1.3em;
+	padding: 1.3em 0 1.8em 0;
+}
+.nt_settings_table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	width: 100%;
+
+	thead {
+		font-weight: bold;
+
+		th {
+			background: #eee;
+			border: 1px solid #ccc;
+		}
+	}
+	td {
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#nt_delete_settings_wrapper {
+	display: none;
+}
+#nt_delete_settings_wrapper .nt_checkbox_wrapper {
+	background: #FFFEAD;
+	padding: 1em;
+}
+.nt_row {
+	margin-bottom: 10px;
+
+	label {
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+
+#nt_delete_settings {
+	margin-right: .75em;
+}
+
+#nt_accordion.nt_collapsed {
+	padding-bottom: 1em;
+}
+#nt_accordion .nt_accordion_toggle a {
+	color: #000;
+	cursor: default;
+	text-decoration: none;
+
+	span {
+		display: none;
+	}
+}
+#nt_accordion.nt_collapsed .nt_accordion_container {
+	background: #F8F7F7;
+	border: 1px solid #ddd;
+	border-top: 0;
+	display: none;
+	margin: 0 1em;
+	padding: 1em;
+
+	@include insetShadow (0, 1px, 1px, 0, rgba(177, 177, 177, 0.4));
+}
+#nt_accordion.nt_collapsed h4 {
+	border: 1px solid #ccc;
+	border-radius: .3em;
+	margin-bottom: 0;
+
+	@include shadow (0, 1px, 1px, 0, rgba(177, 177, 177, 0.4));
+	@include gradient (#ffffff, #dddddd, top, bottom);
+	@include borderRadius(.3em);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include gradient (#fafafa, #d9d9d9, top, bottom);
+	}
+}
+#nt_accordion.nt_collapsed .nt_accordion_toggle a {
+	cursor: pointer;
+	display: block;
+	padding: .7em;
+}
+#nt_accordion.nt_collapsed .nt_accordion_toggle a span {
+	display: inline-block;
+	float: right;
+	margin: 0 0 .5em 1em;
+	@include transition(all, .3s, ease-in-out, 0);
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+}
+#nt_accordion.nt_collapsed .nt_accordion_toggle a.nt_rotate_icon span {
+	@include rotate(180deg);
 }

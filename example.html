@@ -146,9 +146,6 @@
 			code .indent {
 			  color: #65b042; }
 
-			.example select {
-			  font-size: 3em; }
-
 			#ntIFrameWrapper {
 			  margin-top: 20px; }
 		</style>
@@ -222,6 +219,17 @@
 							<span class="scriptTag"><span class="content">&lt;</span>script src<span class="content">=</span><span class="param">"ntoklo.js"</span> type=<span class="param">"text/javascript"</span><span class="content">&gt;&lt;</span>/script<span class="content">&gt;</span></span>
 						</code>
 					</div>
+					<p>Valid values for window.ntParams.p are:</p>
+					<ul>
+						<li>magento</li>
+						<li>bigcommerce</li>
+						<li>wpecommerce</li>
+						<li>oscommerce</li>
+						<li>zencart</li>
+						<li>shopify</li>
+						<li>presta</li>
+						<li>virtuemart</li>
+					</ul>
 					<div class="form_row">
 						<select id="platformInput">
 							<option value="ntoklo">Please choose your platform</option>
@@ -242,7 +250,6 @@
 							<a class="btn account" href="#" id="ntLaunchLogin">I already have an nToklo account</a>
 						</div>
 					</div>
-					<div id="code_to_copy"></div>
 					<div id="ntIFrameWrapper"></div>
 				</div>
 			</div>
@@ -256,7 +263,7 @@
 						"d" : "www.mystore.com"
 					}
 			</script>
-			<script src="includes/ntoklo.js" type="text/javascript"></script>
+			<script src="https://console.ntoklo.com/js/ntoklo.js" type="text/javascript"></script>
 			<script type="text/javascript">
 				var 
 					buttons 	= window.nt_id("buttons");
